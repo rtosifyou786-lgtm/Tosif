@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Cloth Emporium - Jharsuguda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .hero-content .btn {
+            background: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: #111;
+        }
+        .about h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        /* Products Section */
+        .products {
+            padding: 60px 0;
+            background: #000;
+        }
+        .products h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .product-item {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .product-item h3 {
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        /* Gallery Section */
+        .gallery {
+            padding: 60px 0;
+            background: #111;
+        }
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        /* Location & Contact Section */
+        .location-contact {
+            padding: 60px 0;
+            background: #000;
+        }
+        .location-contact h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+        .map {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+        /* Footer */
+        .footer {
+            background: #111;
+            padding: 20px 0;
+            text-align: center;
+        }
+        /* Floating Buttons */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        .floating-btn a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .call-btn {
+            bottom: 90px;
+            background: #007bff;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            .product-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Royal Cloth Emporium</h1>
+                <p>Your Premier Destination for Quality Clothing in Jharsuguda</p>
+                <a href="#products" class="btn">Explore Collections</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to Royal Cloth Emporium, your trusted local cloth and retail store in Jharsuguda, Odisha. We offer a wide range of high-quality clothing for men, women, and children, sourced from the finest fabrics. Our commitment to excellence and customer satisfaction has made us a favorite in the community. Visit us at Mangal Bazar Rd, near CANARA BANK, Marwari Para, Jharsuguda, Odisha 768201.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Collections</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Men's Collection">
+                    <h3>Men's Wear</h3>
+                    <p>Stylish shirts, trousers, and suits for every occasion.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Women's Collection">
+                    <h3>Women's Wear</h3>
+                    <p>Elegant dresses, sarees, and kurtis crafted with care.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1503944583220-4d6e1e4e7b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Kids' Collection">
+                    <h3>Kids' Wear</h3>
+                    <p>Comfortable and colorful outfits for your little ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Shop Front">
+                <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Interior">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Products">
+                <img src="https://images.unsplash.com/photo-1506629905607-0b3b5b4b4b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Display">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Collection">
+                <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Store View">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section class="location-contact">
+        <div class="container">
+            <h2>Location & Contact</h2>
+            <div class="contact-info">
+                <p><strong>Address:</strong> Mangal Bazar Rd, near CANARA BANK, Marwari Para, Jharsuguda, Odisha 768201</p>
+                <p><strong>Phone:</strong> <a href="tel:06370544760">063705 44760</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/06370544760">063705 44760</a></p>
+            </div>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.1234!2d83.1234!3d21.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDA3JzI0LjAiTiA4M8KwMDcnMjQuMCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Royal Cloth Emporium. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btn call-btn">
+        <a href="tel:06370544760" title="Call Now">&#9742;</a>
+    </div>
+    <div class="floating-btn">
+        <a href="https://wa.me/06370544760" title="Chat on WhatsApp">&#128172;</a>
+    </div>
+</body>
+                  </html>
